@@ -1,7 +1,11 @@
-void main(){
-  int peopleNum = 5;
-  int totalPrice = 470;
+import 'dart:io';
 
-  double price = totalPrice / peopleNum; 
-  print('$price');
+void main() {
+  print("How many people?");
+  int peopleNum = int.parse(stdin.readLineSync()!);
+  print("How much is price?");
+  double totalPrice = double.parse(stdin.readLineSync()!);
+
+  double price = totalPrice / peopleNum;
+  print("Price per person is " '$price');
 }
