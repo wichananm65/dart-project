@@ -1,8 +1,13 @@
 import 'dart:math';
+import 'dart:io';
 
 void main() {
-  int min = 100000;
-  int max = 1000000;
-  int password = min + Random().nextInt((max + 1) - min);
+  Random random = new Random();
+  print("How long password you need?");
+  int length = int.parse(stdin.readLineSync()!);
+  String password = '';
+  for (int i = 1; i <= length; i++) {
+    password = password + random.nextInt(9).toString();
+  }
   print("Random password is $password");
 }
